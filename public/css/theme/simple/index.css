@@ -1,0 +1,19 @@
+/* FAQ Category*/
+#faqCategoryList {float:left;width:100%;margin:10px 0 0 0;padding:0;background:#666;list-style:none}
+#faqCategoryList li {position:relative;float:left;margin:0;padding:0;border-right:1px solid #999}
+#faqCategoryList li a.title {float:left;width:100px;text-align:center;display:block;padding:10px 0;color:#fff;text-decoration:none}
+#faqCategoryList li.on {background:#f3f3f3}
+#faqCategoryList li.on a.title {background:#f3f3f3;color:#333}
+#faqCategoryList li.on .sl_faq_category_menu {float:right;background:#f3f3f3;color:#333}
+
+/* FAQ List */
+#faqList { float:left;width:100%;margin:0;padding:15px 0;background:#f3f3f3}
+#faqList dt {position:relative;float:left;width:95%;display:inline;margin:2px 0 0 15px;padding:0;cursor:pointer;}
+#faqList dt.none {display:none}
+#faqList dt a.title {display:block;padding:11px 0 11px 40px;color:#666;border-bottom:1px solid #eee;background:#fff url("<%=asset_path('board/toggle_open.png') %>") no-repeat 10px 11px;text-decoration:none}
+#faqList dt a.title:hover {border-bottom:1px solid #ddd;}
+#faqList dt .sl_faq_menu {position:absolute;top:10px;right:10px}
+#faqList dt.on a {background-position:10px -46px;}
+#faqList dd {float:left;display:inline;width:650px;margin:5px 0 0 15px;padding:5px 0 10px;line-height:140%}
+#faqList dd p {float:left;clear:left;margin:0;padding:3px 10px 0 40px;line-height:120%;letter-spacing:0;}
+#faqList dd span.wrap {float:left;font-family:Arial;border-radius: 0.2em 0.2em 0.2em 0.2em;color: #fff;display:inline;font-size: 11px;margin: 2px 10px 2px 40px;padding: 0 3px;background:#f90}

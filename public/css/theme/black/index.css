@@ -1,0 +1,81 @@
+/* SL main list */
+.sl_main_list {float:left;width:100%}
+.sl_main_list h3 {float:left;width:100%}
+.sl_main_list ul {float:left;width:100%;margin:0;padding:0 0 0 20px}
+.sl_main_list ul li {float:left;width:100%;margin:0;padding:0}
+
+/* Main Blog */
+#sl_main_blog ul {float: left;list-style: none outside none;margin: 0 0 10px;padding: 0;width: 100%;}
+#sl_main_blog li {float:left; margin:0 25px 0 0; padding:0; width:100px}
+#sl_main_blog li.nm {margin:0}
+
+/* Main Gallery */
+#sl_main_gallery .scrollable {float:left;position:relative;overflow:hidden;width:100%;margin:5px 0 0;height:100px}
+#sl_main_gallery .scrollable .items {width:20000em;position:absolute;clear:both}
+#sl_main_gallery .scrollable .items .item {float:left;margin:0;padding:0;width:750px;list-style:none}
+#sl_main_gallery .scrollable .items .item li {float:left;margin:0 25px 0 0;padding:0;width:100px}
+
+
+
+/* default */
+.slboard_main a {outline:none}
+.slboard_main {float:left;width:100%}
+.slboard_main fieldset {border:none;margin:0;padding:0}
+.slboard_main legend,#slboard_main caption {display:none}
+.slboard_main .none {display:none}
+.slboard_main .sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;font-size:12px}
+.slboard_main .sl_input:focus { background-color:#ffffdd}
+.slboard_overlay {position:relative;z-index:9999;display:none;width:400px;padding:35px;font-size:12px}
+.slboard_main a:focus {outline:none}
+.sl_left {text-align:left}
+.sl_center {text-align:center}
+.sl_right {text-align:right}
+
+
+/* popup */
+.check_password_form {float:left;width:300px;background:#fff;width:280px;margin:0;padding:0px}
+.check_password_form .section_top {float:left;width:100%;margin:0 0 10px;padding:0;height:27px;background:#ccc}
+.check_password_form .section_top h2 {float:left;display:inline;margin:7px 0 0 20px;padding:0;font-size:12px;color:#fff;}
+.check_password_form .section_top .close_popup {float:right;margin:5px 0 0;text-indent:-9999px;background: url("/assets/board/close_popup.png") no-repeat scroll 0 0 transparent;display: block;width:20px;height:20px;text-decoration: none;}
+.check_password_form form {margin:0;padding:0px 20px 20px}
+.check_password_form form label {text-indent:-9999px;display:block;height:1px}
+.check_password_form #notice {margin:0 0 0 30px}
+
+/* main_list */
+.slboard_list {float:left;width:100%;margin:0;border-bottom:1px solid #ccc;border-collapse:collapse}
+.slboard_list p {margin:0;padding:0;line-height:100%}
+.slboard_list th {padding:10px 0;background:#ccc}
+.slboard_list td {padding:10px 0;border-bottom:1px solid #f0f0f0;}
+.slboard_list tr.nb td{border-bottom:none}
+.slboard_list td a {color:#666;text-decoration:none}
+.slboard_list td a:hover {color:#333;text-decoration:underline}
+.slboard_list td .sl_photo {margin:0;padding:0}
+.slboard_list th p.registered_date{display:inline;padding-left:40px}
+.slboard_list th p.sl_name,.slboard_list td p.sl_name{text-align:left;text-indent:10px}
+.slboard_list th p.sl_registered_date {margin-right:10px}
+.slboard_list td p.sl_registered_date{font-family:Arial;margin-right:10px;letter-spacing:0;color:#999}
+.slboard_list td p.sl_count,.slboard_list td p.comment  {font-family:Arial;letter-spacing:0;color:#999}
+.slboard_list td .file_link {margin-left:10px}
+
+
+/* content */
+.slboard_content {margin-bottom:10px;padding-bottom:10px}
+.sl_content_header  {position:relative;float:left;width:100%;margin:5px 0 0;padding:10px 0;background:#ccc}
+.sl_content_header h3 {float:left;margin:0.3em 0 0 2em;padding:0;line-height:1em}
+.sl_content_header p {float:right;margin:0 20px 0 0;padding:0;color:#999;}
+.sl_content_main {clear:both}
+.sl_content_text {padding:40px 0;margin:0;line-height:150%;}
+#sl_content {clear:both;width:730px;height:300px}
+
+
+/* form */
+.slboard_form {float:left;margin:5px 0 0 ;padding:5px 0;width:100%}
+.slboard_form .field {float:left;width:100%;margin:0;padding:10px 0;}
+.slboard_form .field label {float:left;display:block;width:100px;padding-left:10px}
+.slboard_form .field label.simple {float:none;display:inline;padding:0;}
+.slboard_form .field br {display:none;}
+.slboard_form textarea,.slboard_form iframe {width:570px;height:200px}
+.slboard_form .actions {float:left;width:100%;text-align:center;margin:10px 0 0;padding:10px 0 0;border-top:1px solid #ccc}
+.slboard_form input,.slboard_form label {vertical-align:middle}
+
+

@@ -1,0 +1,719 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: project\n"
+"POT-Creation-Date: 2015-06-24 17:54+0900\n"
+"PO-Revision-Date: 2015-06-24 17:55+0900\n"
+"Last-Translator: \n"
+"Language-Team: project\n"
+"Language: korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /home/toughjjh/Documents/Aptana Studio 3 Workspace/"
+"slboard_codeigniter/application\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /home/toughjjh/Documents/Aptana Studio 3 Workspace/"
+"slboard_codeigniter/application\n"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/controllers/Notices.php:15
+#: Workspace/slboard_codeigniter/application/controllers/Notices.php:56
+#: Workspace/slboard_codeigniter/application/controllers/SL.php:84
+#: Workspace/slboard_codeigniter/application/controllers/SL.php:121
+#: Workspace/slboard_codeigniter/application/controllers/Contacts.php:53
+#: Workspace/slboard_codeigniter/application/controllers/Portfolios.php:53
+#: Workspace/slboard_codeigniter/application/controllers/Portfolios.php:94
+#: Workspace/slboard_codeigniter/application/controllers/Communities.php:69
+#: Workspace/slboard_codeigniter/application/controllers/Communities.php:110
+#: Workspace/slboard_codeigniter/application/controllers/Galleries.php:52
+#: Workspace/slboard_codeigniter/application/controllers/Galleries.php:93
+#: Workspace/slboard_codeigniter/application/controllers/Histories.php:53
+#: Workspace/slboard_codeigniter/application/controllers/Histories.php:94
+#: Workspace/slboard_codeigniter/application/controllers/Blogs.php:25
+#: Workspace/slboard_codeigniter/application/controllers/Blogs.php:66
+#: Workspace/slboard_codeigniter/application/controllers/Faqs.php:14
+#: Workspace/slboard_codeigniter/application/controllers/Faqs.php:55
+#: Workspace/slboard_codeigniter/application/controllers/Guest_books.php:53
+#: Workspace/slboard_codeigniter/application/controllers/Guest_books.php:94
+#: Workspace/slboard_codeigniter/application/controllers/Intro.php:53
+#: Workspace/slboard_codeigniter/application/controllers/Intro.php:94
+#: Workspace/slboard_codeigniter/application/controllers/Questions.php:41
+#: Workspace/slboard_codeigniter/application/controllers/Questions.php:82
+msgid "title"
+msgstr "제목"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/controllers/SL.php:63
+msgid "Homepage Title"
+msgstr "SLBoard에 오신것을 환영합니다."
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/models/Portfolio.php:19
+#: Workspace/slboard_codeigniter/application/models/Portfolio.php:70
+#: Workspace/slboard_codeigniter/application/models/Contact.php:19
+#: Workspace/slboard_codeigniter/application/models/Contact.php:70
+#: Workspace/slboard_codeigniter/application/models/Community.php:23
+#: Workspace/slboard_codeigniter/application/models/Community.php:74
+#: Workspace/slboard_codeigniter/application/models/Guestbook.php:19
+#: Workspace/slboard_codeigniter/application/models/Guestbook.php:70
+#: Workspace/slboard_codeigniter/application/models/Question.php:19
+#: Workspace/slboard_codeigniter/application/models/Question.php:70
+#: Workspace/slboard_codeigniter/application/models/Notice.php:20
+#: Workspace/slboard_codeigniter/application/models/Notice.php:71
+#: Workspace/slboard_codeigniter/application/models/Blog.php:20
+#: Workspace/slboard_codeigniter/application/models/Blog.php:71
+#: Workspace/slboard_codeigniter/application/models/Gallery.php:19
+#: Workspace/slboard_codeigniter/application/models/Gallery.php:70
+#: Workspace/slboard_codeigniter/application/models/Faq.php:19
+#: Workspace/slboard_codeigniter/application/models/Faq.php:70
+#: Workspace/slboard_codeigniter/application/models/History.php:19
+#: Workspace/slboard_codeigniter/application/models/History.php:70
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:5
+#: Workspace/slboard_codeigniter/application/views/communities/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:16
+#: Workspace/slboard_codeigniter/application/views/communities/comment/add.php:14
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:5
+#: Workspace/slboard_codeigniter/application/views/notices/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:16
+#: Workspace/slboard_codeigniter/application/views/contacts/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:16
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:5
+#: Workspace/slboard_codeigniter/application/views/faqs/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:16
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:5
+#: Workspace/slboard_codeigniter/application/views/guest_books/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:16
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:5
+#: Workspace/slboard_codeigniter/application/views/galleries/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:16
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:5
+#: Workspace/slboard_codeigniter/application/views/blogs/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:16
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:5
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:7
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:14
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:32
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:5
+#: Workspace/slboard_codeigniter/application/views/questions/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:16
+msgid "label_title"
+msgstr "제목"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/models/Portfolio.php:30
+#: Workspace/slboard_codeigniter/application/models/Contact.php:30
+#: Workspace/slboard_codeigniter/application/models/Community.php:34
+#: Workspace/slboard_codeigniter/application/models/Guestbook.php:30
+#: Workspace/slboard_codeigniter/application/models/Question.php:30
+#: Workspace/slboard_codeigniter/application/models/Notice.php:31
+#: Workspace/slboard_codeigniter/application/models/Blog.php:31
+#: Workspace/slboard_codeigniter/application/models/Gallery.php:30
+#: Workspace/slboard_codeigniter/application/models/Faq.php:30
+#: Workspace/slboard_codeigniter/application/models/History.php:30
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:17
+#: Workspace/slboard_codeigniter/application/views/communities/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/communities/comment/add.php:18
+#: Workspace/slboard_codeigniter/application/views/communities/comment/comment/add.php:14
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:17
+#: Workspace/slboard_codeigniter/application/views/notices/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/contacts/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:17
+#: Workspace/slboard_codeigniter/application/views/faqs/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:17
+#: Workspace/slboard_codeigniter/application/views/guest_books/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:17
+#: Workspace/slboard_codeigniter/application/views/galleries/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:17
+#: Workspace/slboard_codeigniter/application/views/blogs/edit.php:9
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:8
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:15
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:33
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:17
+#: Workspace/slboard_codeigniter/application/views/questions/edit.php:9
+msgid "label_content"
+msgstr "내용"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/models/Portfolio.php:39
+#: Workspace/slboard_codeigniter/application/models/Contact.php:39
+#: Workspace/slboard_codeigniter/application/models/Community.php:43
+#: Workspace/slboard_codeigniter/application/models/Guestbook.php:39
+#: Workspace/slboard_codeigniter/application/models/Question.php:39
+#: Workspace/slboard_codeigniter/application/models/Notice.php:40
+#: Workspace/slboard_codeigniter/application/models/Blog.php:40
+#: Workspace/slboard_codeigniter/application/models/Gallery.php:39
+#: Workspace/slboard_codeigniter/application/models/Faq.php:39
+#: Workspace/slboard_codeigniter/application/models/History.php:39
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:34
+msgid "label_title+content"
+msgstr "제목+내용"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/notices/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/contacts/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/faqs/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/guest_books/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/galleries/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/blogs/bottom_menu.php:3
+#: Workspace/slboard_codeigniter/application/views/questions/bottom_menu.php:3
+msgid "index_link"
+msgstr "목록"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/communities/comment/index.php:19
+#: Workspace/slboard_codeigniter/application/views/communities/comment/comment/index.php:17
+#: Workspace/slboard_codeigniter/application/views/notices/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/contacts/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/faqs/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/guest_books/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/galleries/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/blogs/bottom_menu.php:7
+#: Workspace/slboard_codeigniter/application/views/questions/bottom_menu.php:7
+msgid "delete_link"
+msgstr "삭제"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/notices/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/contacts/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/faqs/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/guest_books/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/galleries/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/blogs/bottom_menu.php:8
+#: Workspace/slboard_codeigniter/application/views/questions/bottom_menu.php:8
+msgid "edit_link"
+msgstr "수정"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/notices/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/contacts/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/faqs/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/guest_books/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/galleries/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/blogs/_index.php:2
+#: Workspace/slboard_codeigniter/application/views/questions/_index.php:2
+msgid "notice"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:35
+#: Workspace/slboard_codeigniter/application/views/notices/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:35
+#: Workspace/slboard_codeigniter/application/views/contacts/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:35
+#: Workspace/slboard_codeigniter/application/views/faqs/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:35
+#: Workspace/slboard_codeigniter/application/views/guest_books/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:35
+#: Workspace/slboard_codeigniter/application/views/galleries/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:35
+#: Workspace/slboard_codeigniter/application/views/blogs/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:35
+#: Workspace/slboard_codeigniter/application/views/questions/_index.php:13
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:35
+msgid "no_data"
+msgstr "해당 게시물이 없습니다."
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/notices/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/contacts/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/faqs/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/guest_books/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/galleries/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/blogs/_index.php:15
+#: Workspace/slboard_codeigniter/application/views/questions/_index.php:15
+msgid "link_more"
+msgstr "더보기"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:9
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:9
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:9
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:9
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:9
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:9
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:9
+#, fuzzy
+msgid "poll_title"
+msgstr "제목"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:11
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:12
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:11
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:12
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:11
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:12
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:11
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:12
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:11
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:12
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:11
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:12
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:11
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:12
+msgid "delete"
+msgstr "삭제"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:14
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:14
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:14
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:14
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:14
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:14
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:14
+msgid "add"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:21
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:21
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:21
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:21
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:21
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:21
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:21
+msgid "label_tag"
+msgstr "태그(여러개 태그는 ','로 구분지어서 입력)"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/add.php:24
+#: Workspace/slboard_codeigniter/application/views/communities/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/communities/comment/add.php:21
+#: Workspace/slboard_codeigniter/application/views/communities/comment/comment/add.php:17
+#: Workspace/slboard_codeigniter/application/views/notices/add.php:24
+#: Workspace/slboard_codeigniter/application/views/notices/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/users/add.php:45
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:34
+#: Workspace/slboard_codeigniter/application/views/contacts/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/faqs/add.php:24
+#: Workspace/slboard_codeigniter/application/views/faqs/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/guest_books/add.php:24
+#: Workspace/slboard_codeigniter/application/views/guest_books/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/galleries/add.php:24
+#: Workspace/slboard_codeigniter/application/views/galleries/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/blogs/add.php:24
+#: Workspace/slboard_codeigniter/application/views/blogs/edit.php:12
+#: Workspace/slboard_codeigniter/application/views/questions/add.php:24
+#: Workspace/slboard_codeigniter/application/views/questions/edit.php:12
+msgid "submit"
+msgstr "작성"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/view.php:21
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:19
+#: Workspace/slboard_codeigniter/application/views/notices/view.php:7
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:19
+#: Workspace/slboard_codeigniter/application/views/contacts/view.php:21
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:19
+#: Workspace/slboard_codeigniter/application/views/faqs/view.php:21
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:19
+#: Workspace/slboard_codeigniter/application/views/guest_books/view.php:21
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:19
+#: Workspace/slboard_codeigniter/application/views/galleries/view.php:21
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:19
+#: Workspace/slboard_codeigniter/application/views/blogs/view.php:21
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:19
+#: Workspace/slboard_codeigniter/application/views/questions/view.php:21
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:19
+msgid "label_created_at"
+msgstr "작성일"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/view.php:24
+#: Workspace/slboard_codeigniter/application/views/contacts/view.php:24
+#: Workspace/slboard_codeigniter/application/views/faqs/view.php:24
+#: Workspace/slboard_codeigniter/application/views/guest_books/view.php:24
+#: Workspace/slboard_codeigniter/application/views/galleries/view.php:24
+#: Workspace/slboard_codeigniter/application/views/blogs/view.php:24
+#: Workspace/slboard_codeigniter/application/views/questions/view.php:24
+msgid "tag"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:15
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:15
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:15
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:15
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:15
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:15
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:15
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:15
+msgid "label_id"
+msgstr "번호"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:17
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:17
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:17
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:17
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:17
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:17
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:17
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:17
+msgid "label_comment_count"
+msgstr "의견수"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:18
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:18
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:18
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:18
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:18
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:18
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:18
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:18
+msgid "label_count"
+msgstr "조회수"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/communities/index.php:45
+#: Workspace/slboard_codeigniter/application/views/notices/index.php:45
+#: Workspace/slboard_codeigniter/application/views/contacts/index.php:45
+#: Workspace/slboard_codeigniter/application/views/faqs/index.php:45
+#: Workspace/slboard_codeigniter/application/views/guest_books/index.php:45
+#: Workspace/slboard_codeigniter/application/views/galleries/index.php:45
+#: Workspace/slboard_codeigniter/application/views/blogs/index.php:45
+#: Workspace/slboard_codeigniter/application/views/questions/index.php:44
+msgid "new_link"
+msgstr "신규작성"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:4
+#: Workspace/slboard_codeigniter/application/views/users/add.php:4
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:4
+#: Workspace/slboard_codeigniter/application/views/users/index.php:2
+msgid "not_insert_email"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:5
+#: Workspace/slboard_codeigniter/application/views/users/add.php:5
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:5
+#: Workspace/slboard_codeigniter/application/views/users/index.php:3
+msgid "not_insert_password"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:6
+#: Workspace/slboard_codeigniter/application/views/users/add.php:6
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:6
+#: Workspace/slboard_codeigniter/application/views/users/index.php:4
+msgid "invalid_email"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:7
+#: Workspace/slboard_codeigniter/application/views/users/add.php:7
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:7
+#: Workspace/slboard_codeigniter/application/views/users/index.php:5
+msgid "invalid_password"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:12
+#: Workspace/slboard_codeigniter/application/views/users/add.php:11
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:11
+#: Workspace/slboard_codeigniter/application/views/users/index.php:11
+msgid "label_email"
+msgstr "이메일"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:18
+#: Workspace/slboard_codeigniter/application/views/users/add.php:21
+#: Workspace/slboard_codeigniter/application/views/users/index.php:17
+msgid "label_password"
+msgstr "비밀번호"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:27
+#: Workspace/slboard_codeigniter/application/views/users/index.php:26
+msgid "remember_email"
+msgstr "메일주소 저장"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/login.php:34
+#: Workspace/slboard_codeigniter/application/views/users/index.php:33
+msgid "login"
+msgstr "로그인"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/agree.php:24
+msgid "disagree"
+msgstr "반대"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/agree.php:24
+msgid "agree"
+msgstr "찬성"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:8
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:8
+msgid "exists_email"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:15
+msgid "label_check_email_available"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:16
+msgid "check_email_available"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:26
+msgid "label_password_confirm"
+msgstr "비밀번호 확인"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:30
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:16
+msgid "label_name"
+msgstr "이름"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:34
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:10
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:17
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:35
+msgid "label_nickname"
+msgstr "작성자"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:38
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:20
+msgid "label_description"
+msgstr "소개"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/add.php:42
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:24
+msgid "label_photo"
+msgstr "사진"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/users/edit.php:29
+msgid "label_delete_photo"
+msgstr "사진 삭제"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/page_header.php:4
+msgid "Home"
+msgstr "홈"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/message.php:4
+msgid "close"
+msgstr "닫기"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/jumbotron.php:2
+msgid "Main Title"
+msgstr "SLBoard"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/jumbotron.php:3
+msgid "Main Description"
+msgstr "소개"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/jumbotron.php:4
+msgid "Now Download"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/jumbotron.php:5
+msgid "SLBoard Dream"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/footer.php:2
+msgid "site_address"
+msgstr "경기도청"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blog_category.php:3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:24
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blogs/index.php:2
+msgid "Blog"
+msgstr "블로그"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blog_category.php:11
+msgid "All"
+msgstr "전체"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blog_category.php:34
+#: Workspace/slboard_codeigniter/application/views/layout/elements/notices/index.php:15
+#: Workspace/slboard_codeigniter/application/views/layout/elements/guest_books/index.php:15
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blogs/index.php:14
+#: Workspace/slboard_codeigniter/application/views/layout/elements/questions/index.php:15
+msgid "No Article"
+msgstr ""
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blog_category.php:37
+#: Workspace/slboard_codeigniter/application/views/layout/elements/notices/index.php:17
+#: Workspace/slboard_codeigniter/application/views/layout/elements/guest_books/index.php:17
+#: Workspace/slboard_codeigniter/application/views/layout/elements/galleries/index.php:23
+#: Workspace/slboard_codeigniter/application/views/layout/elements/blogs/index.php:16
+#: Workspace/slboard_codeigniter/application/views/layout/elements/questions/index.php:17
+msgid "more"
+msgstr "더보기"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:4
+msgid "welcome"
+msgstr "환영합니다."
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:5
+msgid "logout"
+msgstr "로그아웃"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:7
+msgid "link_user_agree"
+msgstr "회원가입"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:8
+msgid "link_login"
+msgstr "로그인"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:12
+msgid "Home Title"
+msgstr "SLBoard"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:16
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:19
+msgid "Intro"
+msgstr "소개"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:20
+msgid "Histories"
+msgstr "약력"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:23
+msgid "Contact"
+msgstr "문의"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:25
+#: Workspace/slboard_codeigniter/application/views/layout/elements/galleries/index.php:2
+msgid "Gallery"
+msgstr "사진첩"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:26
+msgid "Question"
+msgstr "질문, 답변"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:27
+msgid "Faq"
+msgstr "FAQ"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:28
+msgid "Notice"
+msgstr "공지사항"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:29
+#: Workspace/slboard_codeigniter/application/views/layout/elements/notices/index.php:2
+#: Workspace/slboard_codeigniter/application/views/layout/elements/guest_books/index.php:2
+#: Workspace/slboard_codeigniter/application/views/layout/elements/questions/index.php:2
+msgid "Guest Book"
+msgstr "방명록"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/header.php:30
+msgid "Portfolio"
+msgstr "포트폴리오"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:9
+msgid "label_titlencontent"
+msgstr "제목+내용"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:19
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:39
+msgid "insert search word"
+msgstr "검색어를 써주세요"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:21
+msgid "Search"
+msgstr "검색"
+
+#: /home/toughjjh/Documents/Aptana Studio 3
+#: Workspace/slboard_codeigniter/application/views/layout/elements/search.php:41
+msgid "search"
+msgstr "검색"
+
+#~ msgid "not_login"
+#~ msgstr "먼저 로그인 해주세요 "
+
+#~ msgid "successfully comment inserted"
+#~ msgstr "의견이 등록되었습니다."
+
+#~ msgid "empty or invalid category_id"
+#~ msgstr "action_vi"
+
+#~ msgid "action_index"
+#~ msgstr "목록"
+
+#~ msgid "action_view"
+#~ msgstr "본문"
+
+#~ msgid "login first"
+#~ msgstr "로그인 해주세요"
+
+#~ msgid "confirm"
+#~ msgstr "확인"
+
+#~ msgid "poll_communities"
+#~ msgstr "토론 게시판"
+
+#~ msgid "blog"
+#~ msgstr "블로그"
+
+#~ msgid "label_writer"
+#~ msgstr "작성자"
+
+#~ msgid "label_agree_count"
+#~ msgstr "찬성수"
+
+#~ msgid "label_disagree_count"
+#~ msgstr "반대수"
+
+#~ msgid "label_agree"
+#~ msgstr "찬성"
+
+#~ msgid "label_disagree"
+#~ msgstr "반대"
+
+#~ msgid "next"
+#~ msgstr "다음"
+
+#, fuzzy
+#~ msgid "label_%s"
+#~ msgstr "번호"
