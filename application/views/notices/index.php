@@ -1,4 +1,4 @@
-<section id="slboard_notice_index">
+<section id="sl_notice_index">
 	<article class="table-responsive">
 		<table class="table table-striped" border="0" cellpadding="0" cellspacing="0">
 			<colgroup>
@@ -42,7 +42,7 @@
 		<?php echo $this->pagination->create_links(); ?>
 		<?php echo $Layout->element('search'); ?>		
 		<?php if($this->session->userdata('admin')): ?>
-			<?php echo anchor('/communities/add','<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'._('new_link'),array('class'=>"btn btn-default col-xs-12 col-md-2")) ?>
+			<?php echo anchor('/notices/add','<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'._('new_link'),array('class'=>"btn btn-default col-xs-12 col-md-2")) ?>
 		<?php endif ?>
 	</div>
 </section>

@@ -12,7 +12,7 @@ class Contact extends SL_Model {
 		$this -> pdo -> join('taggings', 'taggings.taggable_id=' . $this -> table . '.id');
 		$this -> pdo -> join('tags', 'tags.id=taggings.tag_id');
 		$this -> pdo -> where(array('tags.name' => $this -> input -> get('tag'), 'taggings.taggable_type' => $this -> router -> fetch_class()));
-		$this -> pdo -> group_by($this->table.'.id');		
+		$this -> pdo -> group_by($this->table.'.id');
 	}
 
 	private function get_search() {

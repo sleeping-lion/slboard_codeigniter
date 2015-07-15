@@ -64,13 +64,13 @@ class Users extends SL_Controller {
 		$this -> form_validation -> set_rules('description', 'Description', 'required');
 
 		if ($this -> form_validation -> run() == FALSE) {
-			$this -> layout -> render('users/edit', array('data' => $data));
+			$this -> layout -> render('users/edit', array('data' => $data,'common_data'=>$this->common_data));
 		} else {
 			if ($upload_data = $this -> _photo_upload()) {
 				$data = $this -> input -> post(NULL, TRUE);
 				$data['photo'] = $upload_data['file_name'];
 			} else {
-				$this -> layout -> render('users/edit', array('data' => $data, 'error' => $this -> upload -> display_errors()));
+				$this -> layout -> render('users/edit', array('data' => $data,'common_data'=>$this->common_data, 'error' => $this -> upload -> display_errors()));
 				return true;
 			}
 			$this -> load -> model('User');
@@ -78,7 +78,7 @@ class Users extends SL_Controller {
 				redirect('users/edit');
 			} else {
 				//$this -> session -> set_flashdata('error', array('type' => 'alert', 'message' => 'gg'));
-				$this -> layout -> render('users/edit', $data);
+				$this -> layout -> render('users/edit', array('data' => $data,'common_data'=>$this->common_data));
 			}
 		}
 	}

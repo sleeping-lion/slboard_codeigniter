@@ -25,7 +25,7 @@
 				<tr>
 					<td class="sl_t_id hidden-sm hidden-xs"><?php echo $value['id'] ?></td>	
 					<td class="sl_t_title"><?php echo sl_show_anchor('communities/view/'.$value['id'],$value['title'],array('sl_page'=>$this->uri->segment(2))) ?></td>
-					<td class="sl_t_count"><?php echo $value['comment_count'] ?></td>			
+					<td class="sl_t_count"></td>			
 					<td class="sl_t_count"><?php echo $value['count'] ?></td>
 					<td class="sl_t_created_at"><?php echo $value['created_at'] ?></td>
 				</tr>
@@ -42,7 +42,7 @@
 		<?php echo $this->pagination->create_links(); ?>
 		<?php echo $Layout->element('search'); ?>		
 		<?php if($this->session->userdata('admin')): ?>
-			<?php echo anchor('/communities/add','<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'._('new_link'),array('class'=>"btn btn-default col-xs-12 col-md-2")) ?>
+			<?php echo anchor('/guest_books/add','<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'._('new_link'),array('class'=>"btn btn-default col-xs-12 col-md-2")) ?>
 		<?php endif ?>
 	</div>
 </section>

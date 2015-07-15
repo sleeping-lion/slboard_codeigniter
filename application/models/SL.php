@@ -1,6 +1,7 @@
 <?php
 
 class SL_Model extends CI_Model {
+	public $category_model=null;
 	protected $table;
 	protected $table_content;
 	protected $table_user='users';
@@ -13,13 +14,14 @@ class SL_Model extends CI_Model {
 		$query = $this -> pdo -> get($this->table);
 	}
 
-	public function get_index($per_page = 0, $page = 0) {
+	public function get_index($per_page = 0, $page = 0, $order='id', $desc='desc') {
 		$result['total'] = $this -> pdo -> count_all($this->table);
 
 		if (!$result['total'])
 			return $result;
 
-		$this -> pdo -> order_by("id", "desc");
+		$this -> pdo -> where(array($this->table.'.enable' => TRUE));
+		$this -> pdo -> order_by($order, $desc);
 		$query = $this -> pdo -> get($this->table, $per_page, $page);
 		$result['list'] = $query -> result_array();
 		return $result;
@@ -58,12 +60,16 @@ class SL_Model extends CI_Model {
 
 		return $result;
 	}	
+	
 
 	public function insert(Array $data) {
 		$data['user_id']=$this->session->userdata('user_id');
 		$data['created_at']=date("Y-m-d H:i:s");
-		if ($this -> pdo -> insert($this->table, $data)) {
-			return $this -> pdo -> insert_id();
+		if ($this -> pdo -> insert($this->table, array('title' => $data['title'], 'user_id' => $data['user_id'], 'created_at' => $data['created_at']))) {
+			$id = $this -> pdo -> insert_id();
+			if(!empty($this->table_content))
+				$this -> pdo -> insert($this->table_content, array('id' => $id, 'content' => $_POST['content']));
+			return $id;
 		} else {
 			return false;
 		}

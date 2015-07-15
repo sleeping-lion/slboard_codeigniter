@@ -54,7 +54,7 @@ class SL_Controller extends CI_Controller {
 		$this->common_data['controller']=ucfirst($this -> model);
 		
 		$this->load->model('Blogcategory');
-		$this->common_data['blogCategories']=$this->Blogcategory->get_index();
+		$this->common_data['blogCategories']=$this->Blogcategory->get_index(0,0,'id','asc');
 		
 		$this->load->model('Tag');
 		$tags=$this->Tag->get_cloud('blogs');
@@ -65,18 +65,30 @@ class SL_Controller extends CI_Controller {
 		$this -> layout -> title_for_layout = _('Homepage Title');
 	}
 	
-	public function index($page = 0) {
-		if(isset($this->category_model))
-			$this -> load -> model($this->category_model);
-				
+	public function index($page = 0) {				
 		$this -> load -> model($this->model);
 		
 		$config['per_page']=10;
 		$data = $this -> {$this->model} -> get_index($config['per_page'], $page);
 		$config['total_rows'] = $data['total'];
 		
+		if(isset($this->{$this->model}->category_model)) {
+			$this -> load -> model($this->{$this->model}->category_model);
+			$data['category']=$this->{$this->{$this->model}->category_model}->get_index();
+			
+			if($this->input->get('category_id')) {
+				$categoryId=$this->input->get('category_id');
+			} else {
+				$categoryId=$data['category']['list'][0]['id'];
+			}
+		} else {
+			$categoryId=null;
+		}
+		
+		
+				
 		$this->setting_pagination($config);
-		$this -> layout -> render( $this -> router -> fetch_class().'/index', array('common_data'=>$this->common_data,'data' => $data));
+		$this -> layout -> render( $this -> router -> fetch_class().'/index', array('common_data'=>$this->common_data,'data' => $data,'categoryId'=>$categoryId));
 	}
 
   
@@ -133,7 +145,7 @@ class SL_Controller extends CI_Controller {
 		} else {
 			$this->load->model($this->model);
 			$data = $this -> input -> post(NULL, TRUE);
-			$data['user_id']=$this->session->userdata('user_id');
+			
 			if ($id = $this -> {$this->model} -> insert($data)) {
 				
 				$this -> session -> set_flashdata('message', array('type' => 'success', 'message' => 'gg'));

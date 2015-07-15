@@ -11,7 +11,7 @@ class SLCategory_Model extends CI_Model {
 		$query = $this -> pdo -> get($this->table);
 	}
 		
-	public function get_index($per_page = 0, $page = 0) {
+	public function get_index($per_page = 0, $page = 0, $order='id', $desc='desc') {
 		$result['total'] = $this -> pdo -> count_all_results($this -> table);
 
 		if (!$result['total'])
