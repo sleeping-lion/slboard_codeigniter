@@ -10,5 +10,5 @@
   		<textarea id="sl_content" name="content" class="form-control" required="required"><?=$data['content']['content'] ?></textarea>
   	</div>
   	<input type="submit" class="btn btn-primary" value="<?php echo _('submit') ?>" />
-	</form>
+	<?php echo form_close() ?>
 </section>

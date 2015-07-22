@@ -19,5 +19,5 @@
 <div class="input text"><label for="contactcontent-content">Content</label><input type="text" id="contactcontent-content" class="form-control" name="ContactContent[content]"></div></div>
 <div class="form-group">
 <button type="submit" class="btn btn-primary">Save Article</button></div>
-</form>
+	<?php echo form_close() ?>
 </section>

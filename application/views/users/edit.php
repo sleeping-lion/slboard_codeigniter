@@ -32,5 +32,5 @@
     	<input type="file" name="photo" id="sl_photo" />
   	</div>  
   <input type="submit" class="btn btn-primary" value="<?php echo _('submit') ?>" />      
-	</form>
+	<?php echo form_close() ?>
 </section>

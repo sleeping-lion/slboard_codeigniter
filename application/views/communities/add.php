@@ -22,5 +22,5 @@
   		<input type="text" class="form-control" id="sl_tag" name="tag" maxlength="60" required="required" />
   	</div>  	
   	<input type="submit" class="btn btn-primary" value="<?php echo _('submit') ?>" />
-	</form>
+	<?php echo form_close() ?>
 </section>
