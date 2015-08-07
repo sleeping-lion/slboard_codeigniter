@@ -27,8 +27,8 @@
 <div class="visible-xs-block col-xs-12" style="margin:20px 0 0">
 	<form class="form-inline sl_search_form" role="form" method="get">
 		<div class="row">
-			<div class="search_type form-control">
-			<select name="search_type">
+			<div class="search_type col-xs-4"  style="text-align:right">
+			<select name="search_type" class="form-control">
 		<option value="title" <?php if($this->input->get('search_type')=='title'): ?>selected="selected"<?php endif ?>><?php echo _('label_title') ?></option>
 		<option value="content" <?php if($this->input->get('search_type')=='content'): ?>selected="selected"<?php endif ?>><?php echo _('label_content') ?></option>
 		<option value="titlencontent" <?php if($this->input->get('search_type')=='titlencontent'): ?>selected="selected"<?php endif ?>><?php echo _('label_title+content') ?></option>

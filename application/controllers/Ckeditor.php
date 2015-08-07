@@ -26,8 +26,8 @@ class Ckeditor extends SL_Controller {
 		$config['allowed_types'] = 'gif|jpg|jpeg|png';
 		$config['encrypt_name'] = true;
 		//$config['max_size'] = '100';
-		$config['max_width'] = '1024';
-		$config['max_height'] = '768';
+		$config['max_width'] = '3000';
+		$config['max_height'] = '3000';
 
 		$this -> load -> library('upload', $config);
 		$this -> upload -> initialize($config);
@@ -36,11 +36,11 @@ class Ckeditor extends SL_Controller {
 			$data = $this -> upload -> data();
 
 			$config['image_library'] = 'gd2';
-			$config['source_image'] = $data['full_path'];
 			$config['create_thumb'] = TRUE;
-			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 50;
-			// $config['height'] = 0;
+			$config['maintain_ratio'] = FALSE;
+			$config['width'] = 400;
+			$config['height'] = 400;
+			$config['thumb_marker'] = '';
 
 			$this -> load -> library('image_lib', $config);
 			$this -> image_lib -> resize();

@@ -8,7 +8,7 @@
 		<ul>
 			<?php if(isset($common_data['tags'])): ?>
 			<?php foreach($common_data['tags'] as $index=>$value): ?>
-			<li><?php echo anchor('/communities?tag='.$value['name'],$value['name'],array('class'=>'css_class')) ?></li>
+			<li><?php echo anchor('/?tag='.$value['name'],$value['name'],array('class'=>'css_class')) ?></li>
 			<?php endforeach ?>
 			<?php endif ?>
 		</ul>

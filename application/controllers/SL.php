@@ -108,8 +108,8 @@ class SL_Controller extends CI_Controller {
 			case 'titlencontent' :
 				if ($this -> input -> get('search_word')) {
 					$this -> pdo -> join($this -> content_table, $this->table.'.id='.$this->content_table.'.id');
-					$this -> pdo -> like($this -> content_table . '.title', $this -> input -> get('search_word'));
-					$this -> pdo -> or_like($this -> content_table, $this -> input -> get('search_word'));
+					$this -> pdo -> like($this -> table . '.title', $this -> input -> get('search_word'));
+					$this -> pdo -> or_like($this -> content_table.'.content', $this -> input -> get('search_word'));
 					$query_where = 'WHERE (b.title LIKE CONCAT("%",:title,"%") OR bc.content LIKE CONCAT("%",:content,"%")) AND b.enable=1';
 				}
 				$result['search_type_title'] = _('label_title+content');
