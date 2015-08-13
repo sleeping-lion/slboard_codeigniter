@@ -7,9 +7,9 @@
 		<li><?php echo anchor('/users/agree',_('link_user_agree')) ?></li>
 		<li><?php echo anchor('/login',_('link_login')) ?></li>
 		<?php endif ?>
-  </ul>	
+  </ul>
 	<nav class="container">
-		<h1><a href="/"><?php echo _('Home Title') ?></a></h1>
+		<h1><?php echo anchor('/',_('Home Title')) ?></h1>
 		<ul class="nav nav-pills">
   <li role="presentation" class="dropdown<?php echo sl_active_class(array('intro','histories','pages'),true) ?>">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">

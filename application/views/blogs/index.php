@@ -18,7 +18,7 @@
 	<?php unset($blog) ?>	
 	<?php else: ?>
 	<article>
-	<p><?php echo __('No Article') ?></p>
+	<p><?php echo _('No Article') ?></p>
 	</article>
 	<?php endif ?>
 	<div id="sl_index_bottom_menu">

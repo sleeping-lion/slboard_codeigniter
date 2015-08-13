@@ -14,12 +14,4 @@ class Home extends SL_Controller {
 		$this->layout->add_js('/js/index.js');
 		$this->layout->render('home/index',array('data'=>$data,'common_data'=>$this->common_data));
 	}
-	
-	public function view($id) {
-		
-	}
-	
-	public function edit($id) {
-		
-	}	
 }

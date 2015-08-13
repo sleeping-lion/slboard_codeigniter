@@ -2,7 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SL_Controller extends CI_Controller {
-		
+	protected $use_category=false;
+	protected $use_comment=false;
+	protected $use_file_upload=false;
+	protected $use_image_upload=false;
 	protected $model;
 	protected $category_model=null;
 	protected $common_data;
@@ -27,7 +30,7 @@ class SL_Controller extends CI_Controller {
 		parent::__construct();
 
 		/* i18n locale */
-		$locale = 'ko_KR';
+		$locale = 'ko_KR.UTF-8';
 
 		if (!function_exists('_'))
 			echo '없어!!';
@@ -182,7 +185,7 @@ class SL_Controller extends CI_Controller {
 			
 			if ($id = $this -> {$this->model} -> insert($data)) {
 				
-				$this -> session -> set_flashdata('message', array('type' => 'success', 'message' => 'gg'));
+				$this -> session -> set_flashdata('message', array('type' => 'success', 'message' => _('Successfully Created Article')));
 				redirect($this -> router -> fetch_class());
 			} else {
 				redirect($this -> router -> fetch_class().'/add');
@@ -190,20 +193,22 @@ class SL_Controller extends CI_Controller {
 		}
 	}  
   
-  public function view($id) {
-		$this->load->helper('sl');
-		
+  public function view($id) {		
 		$this -> load -> model($this->model);
+		
+		if(!$this -> {$this->model} -> get_count($id))
+			show_404();
+		
 		$data['content'] = $this -> {$this->model} -> get_content($id);
 		
 		if($this->comment)
 			$data['comments'] = $this -> {$this->model} -> get_comments($data['content']['id']);
 
-		$this -> layout -> add_css('/css/plugin/jquery.fancybox-1.3.4.css');
-		$this -> layout -> add_js('/js/plugin/jquery.uri.js');
-		$this -> layout -> add_js('/js/plugin/jquery.fancybox.1.3.4.js');
+
+		$this->load->helper('sl');
+		
 		$this -> layout -> add_js('/js/boards/view.js');
-		$this -> layout -> render($this -> router -> fetch_class().'/view', array('common_data'=>$this->common_data,'data' => $data));  	
+		$this -> layout -> render($this -> router -> fetch_class().'/view', array('common_data'=>$this->common_data,'data' => $data));
   }  
 	
 	public function setting_pagination(Array $config) {			

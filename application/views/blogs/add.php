@@ -1,4 +1,4 @@
-<section id="slboard_blog_new">
+<section id="sl_blog_new">
 	<?php echo validation_errors() ?>	
 	<?php echo form_open(null,array('role'=>'form')) ?>
   	<div class="form-group">
