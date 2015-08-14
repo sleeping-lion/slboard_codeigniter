@@ -1,4 +1,4 @@
-<section id="poll_community_view">
+<section id="sl_guest_book_view">
   	<div class="poll_count" style="margin:30px 10%;width:80%">
 	<?php if($data['content']['comment_count']): ?>
 	<?php if($data['polls']['total']): ?>		

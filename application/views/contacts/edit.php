@@ -1,4 +1,4 @@
-<section id="poll_community_edit">
+<section id="sl_contact_edit">
 	<form role="form" action="update.php" method="post">
 		<input type="hidden" name="id" value="<?=$data['content']['id'] ?>" />
   	<div class="form-group">

@@ -12,7 +12,7 @@
   	<div class="form-group">
     	<label for="sl_photo"><?php echo _('label_photo') ?></label>
     	<input type="file" name="userfile" id="sl_photo"  />
-  	</div>  	
+  	</div>
   	<input type="submit" class="btn btn-primary" value="<?php echo _('submit') ?>" />
 	<?php echo form_close() ?>
 </section>

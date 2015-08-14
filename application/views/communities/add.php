@@ -1,4 +1,4 @@
-<section id="poll_community_new">
+<section id="sl_community_new">
 	<?php echo validation_errors() ?>	
 	<?php echo form_open(null,array('role'=>'form')) ?>
   	<div class="form-group">

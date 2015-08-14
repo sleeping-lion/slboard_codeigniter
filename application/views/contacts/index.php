@@ -1,4 +1,4 @@
-<section id="slboard_notice_index">
+<section id="sl_contact_index">
 	<article class="table-responsive">
 		<table class="table table-striped" border="0" cellpadding="0" cellspacing="0">
 			<colgroup>
