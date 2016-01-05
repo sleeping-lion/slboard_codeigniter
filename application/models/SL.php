@@ -18,8 +18,11 @@ class SL_Model extends CI_Model {
 		return $this -> pdo -> count_all_results($this->table);
 	}
 
-	public function get_index($per_page = 0, $page = 0, $order='id', $desc='desc') {
-		$result['total'] = $this -> pdo -> count_all($this->table);
+	public function get_index($per_page = 0, $page = 0, $order='id', $desc='desc') {		
+		if($this -> input -> get('search_type') AND $this -> input -> get('search_word'))
+			$result=$this->get_search();
+		
+		$result['total'] = $this -> pdo -> count_all_results($this->table);
 
 		if (!$result['total'])
 			return $result;
@@ -27,11 +30,50 @@ class SL_Model extends CI_Model {
 		$this -> pdo -> select($this->table.'.*,'.$this->table_user.'.nickname');
 		$this -> pdo -> join($this->table_user, $this->table.'.user_id = '.$this->table_user.'.id');
 		$this -> pdo -> where(array($this->table.'.enable' => TRUE));
+		
+		if($this -> input -> get('search_type') AND $this -> input -> get('search_word'))
+			$this->get_search();
+		
 		$this -> pdo -> order_by($order, $desc);
 		$query = $this -> pdo -> get($this->table, $per_page, $page);
 		$result['list'] = $query -> result_array();
+		
 		return $result;
 	}
+	
+	protected function get_search() {
+		$result['search_type_title'] = _('label_title');
+		switch($this -> input -> get('search_type')) {
+			case 'title' :
+				if ($this -> input -> get('search_word'))
+					$this -> pdo -> like($this -> table . '.title', $this -> input -> get('search_word'));
+				break;
+			case 'content' :
+				if ($this -> input -> get('search_word')) {
+					$this -> pdo -> join($this -> content_table, $this->table.'.id='.$this->content_table.'.id');
+					$this -> pdo -> like($this -> content_table . '.content', $this -> input -> get('search_word'));
+				}
+				$result['search_type_title'] = _('label_content');
+				break;
+			case 'titlencontent' :
+				if ($this -> input -> get('search_word')) {
+					$this -> pdo -> join($this -> content_table, $this->table.'.id='.$this->content_table.'.id');
+					$this -> pdo -> like($this -> table . '.title', $this -> input -> get('search_word'));
+					$this -> pdo -> or_like($this -> content_table.'.content', $this -> input -> get('search_word'));
+					$query_where = 'WHERE (b.title LIKE CONCAT("%",:title,"%") OR bc.content LIKE CONCAT("%",:content,"%")) AND b.enable=1';
+				}
+				$result['search_type_title'] = _('label_title+content');
+				break;
+			/*	case 'nickname' :
+			 if($this -> input -> get('search_word')) {
+			 $this -> pdo -> join('users', 'poll_communities.user_id=users.id');
+			 $this -> pdo -> like('users.nickname',$this -> input -> get('search_word'));
+			 }
+			 $result['search_type_title'] = _('label_nickname');
+			 break; */
+		}
+		return $result;
+	}		
 
 	public function get_content($id) {
 		$this -> pdo -> select($this->table.'.*,'.$this->table_content.'.content,'.$this->table_user.'.nickname');
