@@ -93,41 +93,6 @@ class SL_Controller extends CI_Controller {
 		$this->setting_pagination($config);
 		$this -> layout -> render( $this -> router -> fetch_class().'/index', array('common_data'=>$this->common_data,'data' => $data,'categoryId'=>$categoryId));
 	}
-	
-	protected function get_search() {
-		$result['search_type_title'] = _('label_title');
-		switch($this -> input -> get('search_type')) {
-			case 'title' :
-				if ($this -> input -> get('search_word'))
-					$this -> pdo -> like($this -> table . '.title', $this -> input -> get('search_word'));
-				break;
-			case 'content' :
-				if ($this -> input -> get('search_word')) {
-					$this -> pdo -> join($this -> content_table, $this->table.'.id='.$this->content_table.'.id');
-					$this -> pdo -> like($this -> content_table . '.content', $this -> input -> get('search_word'));
-				}
-				$result['search_type_title'] = _('label_content');
-				break;
-			case 'titlencontent' :
-				if ($this -> input -> get('search_word')) {
-					$this -> pdo -> join($this -> content_table, $this->table.'.id='.$this->content_table.'.id');
-					$this -> pdo -> like($this -> table . '.title', $this -> input -> get('search_word'));
-					$this -> pdo -> or_like($this -> content_table.'.content', $this -> input -> get('search_word'));
-					$query_where = 'WHERE (b.title LIKE CONCAT("%",:title,"%") OR bc.content LIKE CONCAT("%",:content,"%")) AND b.enable=1';
-				}
-				$result['search_type_title'] = _('label_title+content');
-				break;
-			/*	case 'nickname' :
-			 if($this -> input -> get('search_word')) {
-			 $this -> pdo -> join('users', 'poll_communities.user_id=users.id');
-			 $this -> pdo -> like('users.nickname',$this -> input -> get('search_word'));
-			 }
-			 $result['search_type_title'] = _('label_nickname');
-			 break; */
-		}
-		return $result;
-	}	
-
   
 	public function edit($id) {
 		if(!$this->session->userdata('admin')) {
