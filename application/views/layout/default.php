@@ -13,7 +13,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<![endif]-->
 </head>
-<body>
+<body itemscope itemtype="<?php echo $common_data['page_itemtype'] ?>">
 	<?php echo $Layout->element('header') ?>
 	<div id="mom">
 		<div id="main" class="container">
