@@ -65,9 +65,9 @@ class Tag extends SL_Model {
 			} else {
 				if ($this -> pdo -> insert('tags', array('name' => $value, 'taggings_count' => 1))) {
 					$id = $this -> pdo -> insert_id();
-				}				
-			}
-			$this -> pdo -> insert('taggings', array('tag_id' => $id, 'taggable_id' => $data['taggable_id'], 'taggable_type' => $data['taggable_type'], 'context' => 'tags','created_at'=> date('Y-m-d H:i:s')));			
+				}
+				$this -> pdo -> insert('taggings', array('tag_id' => $id, 'taggable_id' => $data['taggable_id'], 'taggable_type' => $data['taggable_type'], 'context' => 'tags','created_at'=> date('Y-m-d H:i:s')));							
+			}			
 		}
 		return true;
 	}
