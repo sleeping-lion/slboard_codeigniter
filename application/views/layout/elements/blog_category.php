@@ -8,7 +8,7 @@
   </div>
 	<div class="box_content">
 		<ul>
-			<li <?php if(empty($this->input->get('blog_category_id'))): ?>class="active"<?php endif ?>><a href=""><?php echo _('All') ?></a></li>
+			<li <?php if(empty($this->input->get('blog_category_id'))): ?>class="active"<?php endif ?>><?php echo anchor('/blogs',_('All'),array('title'=>_('All'))) ?></li>
     	<?php if(isset($common_data['blogCategories'])): ?>
     	<?php foreach($common_data['blogCategories']['list'] as $blogCategory): ?> 		
     	<?php if(empty($blogCategory['blog_category_id'])): ?>
@@ -34,6 +34,6 @@
 			<li><?php echo _('No Article') ?></li>
     	<?php endif ?>
 		</ul>
-		<?php echo anchor('/blogs',_('more')) ?>
+		<?php echo anchor('/blogs',_('more'),array('title'=>_('more'))) ?>
 	</div> 
 </article>

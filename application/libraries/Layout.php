@@ -188,7 +188,7 @@ class Layout {
                     } else {
                         $src = $this->_ci->config->item('js_file_path') . $script['src'];
                     }
-                    $s.='<script src="' . $src . '" type="text/javascript"></script>';
+                    $s.='<script src="' . $src . '" defer></script>';
                     break;
                 case 'embed':
                     $s.='<script type="text/javascript">';
@@ -226,7 +226,7 @@ class Layout {
                     } else {
                         $src = $this->_ci->config->item('css_file_path') . $style['src'];
                     }
-                    $s.='<link href="' . $src . '" media="' . $style['media'] . '" type="text/css" rel="stylesheet" />';
+                    $s.='<link href="' . $src . '" media="' . $style['media'] . '" type="text/css" rel="stylesheet" />'."\n\t";
 
                     break;
                 case 'import':
@@ -241,7 +241,7 @@ class Layout {
                 case 'embed':
                     $s.='<style type="text/css" media="' . $style['media'] . '">';
                     $s.=$style['src'];
-                    $s.='</style>';
+                    $s.='</style>'."\n";
 
                     break;
                 default:

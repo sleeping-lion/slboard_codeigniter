@@ -7,47 +7,6 @@ class Contact extends SL_Model {
 
 	protected $table = 'contacts';
 
-	private function get_tag_search() {
-		$this -> pdo -> select($this->table.'.*,tags.name,tags.taggings_count');
-		$this -> pdo -> join('taggings', 'taggings.taggable_id=' . $this -> table . '.id');
-		$this -> pdo -> join('tags', 'tags.id=taggings.tag_id');
-		$this -> pdo -> where(array('tags.name' => $this -> input -> get('tag'), 'taggings.taggable_type' => $this -> router -> fetch_class()));
-		$this -> pdo -> group_by($this->table.'.id');
-	}
-
-	private function get_search() {
-		$result['search_type_title'] = _('label_title');
-		switch($this -> input -> get('search_type')) {
-			case 'title' :
-				if ($this -> input -> get('search_word'))
-					$this -> pdo -> like($this -> table . '.title', $this -> input -> get('search_word'));
-				break;
-			case 'content' :
-				if ($this -> input -> get('search_word')) {
-					$this -> pdo -> join('poll_community_contents', 'poll_communities.id=poll_community_contents.id');
-					$this -> pdo -> like('poll_community_contents.content', $this -> input -> get('search_word'));
-				}
-				$result['search_type_title'] = _('label_content');
-				break;
-			case 'titlencontent' :
-				if ($this -> input -> get('search_word')) {
-					$this -> pdo -> join('poll_community_contents', 'poll_communities.id=poll_community_contents.id');
-					$this -> pdo -> like('poll_communities.title', $this -> input -> get('search_word'));
-					$this -> pdo -> or_like('poll_community_contents', $this -> input -> get('search_word'));
-					$query_where = 'WHERE (b.title LIKE CONCAT("%",:title,"%") OR bc.content LIKE CONCAT("%",:content,"%")) AND b.enable=1';
-				}
-				$result['search_type_title'] = _('label_title+content');
-				break;
-			/*	case 'nickname' :
-			 if($this -> input -> get('search_word')) {
-			 $this -> pdo -> join('users', 'poll_communities.user_id=users.id');
-			 $this -> pdo -> like('users.nickname',$this -> input -> get('search_word'));
-			 }
-			 $result['search_type_title'] = _('label_nickname');
-			 break; */
-		}
-		return $result;
-	}
 
 	public function get_index($per_page = 0, $page = 0) {
 		if ($this -> input -> get('tag')) {

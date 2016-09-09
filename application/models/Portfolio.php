@@ -5,4 +5,5 @@ require_once 'SL.php';
 
 class Portfolio extends SL_Model {
 	protected $table = 'portfolios';
+	protected $table_content='portfolio_contents';
 }

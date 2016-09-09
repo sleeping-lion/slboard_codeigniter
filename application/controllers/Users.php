@@ -19,11 +19,11 @@ class Users extends SL_Controller {
 	}
 
 	public function index($page=0) {
-		$this -> layout -> render('users/index');
+		$this -> layout -> render('users/index',$this->return_data);
 	}
 	
 	public function view($id) {
-		$this -> layout -> render('users/view');
+		$this -> layout -> render('users/view',$this->return_data);
 	}
 
 	public function add() {
@@ -35,13 +35,13 @@ class Users extends SL_Controller {
 
 		if ($this -> form_validation -> run() == FALSE) {
 			$this -> layout -> add_js('/js/users/add.js');
-			$this -> layout -> render('users/add',array('common_data'=>$this->common_data));
+			$this -> layout -> render('users/add',$this->return_data);
 		} else {
 			if ($upload_data = $this -> _photo_upload()) {
 				$data = $this -> input -> post(NULL, TRUE);
 				$data['photo'] = $upload_data['file_name'];
 			} else {
-				$this -> layout -> render('users/add', array('error' => $this -> upload -> display_errors()));
+				$this -> layout -> render('users/add', $this->return_data);
 				return true;
 			}
 			$this -> load -> model('User');
@@ -49,7 +49,7 @@ class Users extends SL_Controller {
 				redirect('users/complete');
 			} else {
 				//$this -> session -> set_flashdata('error', array('type' => 'alert', 'message' => 'gg'));
-				$this -> layout -> render('users/add',array('common_data'=>$this->common_data));
+				$this -> layout -> render('users/add',$this->return_data);
 
 			}
 		}
@@ -57,34 +57,37 @@ class Users extends SL_Controller {
 
 	public function edit($id = null) {
 		$this -> load -> model('User');
-		$data['content'] = $this -> User -> get_content($this -> session -> userdata('user_id'));
+		$this->return_data['data']['content'] = $this -> User -> get_content($this -> session -> userdata('user_id'));
 
 		$this -> load -> library('form_validation');
-		$this -> form_validation -> set_rules('name', 'Name', 'required|min_length[5]|max_length[60]');
+		$this -> form_validation -> set_rules('name', 'Name', 'required|min_length[3]|max_length[60]');
 		$this -> form_validation -> set_rules('description', 'Description', 'required');
 
 		if ($this -> form_validation -> run() == FALSE) {
-			$this -> layout -> render('users/edit', array('data' => $data,'common_data'=>$this->common_data));
+			$this -> layout -> render('users/edit', $this->return_data);
 		} else {
 			if ($upload_data = $this -> _photo_upload()) {
 				$data = $this -> input -> post(NULL, TRUE);
 				$data['photo'] = $upload_data['file_name'];
 			} else {
-				$this -> layout -> render('users/edit', array('data' => $data,'common_data'=>$this->common_data, 'error' => $this -> upload -> display_errors()));
-				return true;
+			//	$this -> layout -> render('users/edit',$this->return_data);
+			//	return true;
 			}
 			$this -> load -> model('User');
+			$data = $this -> input -> post(NULL, TRUE);
+			
 			if ($id = $this -> User -> update($data)) {
+				$this -> session -> set_flashdata('message', array('type' => 'success', 'message' => _('Successfully Edited Article')));				
 				redirect('users/edit');
 			} else {
 				//$this -> session -> set_flashdata('error', array('type' => 'alert', 'message' => 'gg'));
-				$this -> layout -> render('users/edit', array('data' => $data,'common_data'=>$this->common_data));
+				$this -> layout -> render('users/edit',$this->return_data);
 			}
 		}
 	}
 
 	public function complete() {
-		$this -> layout -> render('users/complete',array('common_data'=>$this->common_data));
+		$this -> layout -> render('users/complete',$this->return_data);
 	}
 
 	public function login() {
@@ -117,7 +120,7 @@ class Users extends SL_Controller {
 
 		$this -> layout -> add_js('/js/jquery-2.1.1.min.js');
 		$this -> layout -> add_js('/js/users/login.js');
-		$this -> layout -> render('users/login',array('common_data'=>$this->common_data));
+		$this -> layout -> render('users/login',$this -> return_data);
 	}
 
 	public function logout() {

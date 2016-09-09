@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | Please see the user guide for complete details:
 |
-|	http://codeigniter.com/user_guide/general/routing.html
+|	https://codeigniter.com/user_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
@@ -65,5 +65,3 @@ $route['communities/comments/comments/delete/(:num)']='community_comment_comment
 $route['login'] = "users/login";
 $route['logout'] = "users/logout";
 $route['users/edit'] = "users/edit";
-
-

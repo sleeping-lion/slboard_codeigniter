@@ -5,6 +5,106 @@ require_once 'SL.php';
 
 class Tag extends SL_Model {
 	protected $table = 'tags';
+	
+	public function get_index($per_page = 0, $page = 0, $category_id = NULL, $order = NULL, $desc = NULL, $enable = TRUE) {
+		if (isset($category_id)) {
+			$this -> pdo -> where(array($this -> table . '.' . singular($this -> table) . '_category_id' => $category_id));
+			
+			if($this -> input -> get('search_type'))
+				$result=$this->get_search($this -> input -> get('search_type'),$this -> input -> get('search_word'));
+			
+			$result['total'] = $this -> pdo -> count_all_results($this -> table);
+		} else {			
+		if($this -> input -> get('search_type'))
+			$result=$this->get_search($this -> input -> get('search_type'),$this -> input -> get('search_word'));
+			
+			$result['total'] = $this -> pdo -> count_all_results($this -> table);
+		}
+
+		if (empty($order)) {
+			if (empty($this -> order)) {
+				$order = $this -> order;
+			} else {
+				$order = 'id';
+			}
+		}
+
+		if (empty($desc)) {
+			if (empty($this -> desc)) {
+				$desc = $this -> desc;
+			} else {
+				$desc = TRUE;
+			}
+		}
+		
+		if(!is_bool($desc))
+			throw new Exception("Error Processing Request", 1);
+		
+		if($desc) {
+			$desc='desc';
+		}	else {
+			$desc='asc';
+		}
+
+		if (!$result['total'])
+			return $result;
+
+		$this -> pdo -> select($this -> table . '.*');
+		if (isset($category_id))
+			$this -> pdo -> where(array($this -> table . '.' . singular($this -> table) . '_category_id' => $category_id));
+		
+		if($this -> input -> get('search_type'))
+			$this->get_search($this -> input -> get('search_type'),$this -> input -> get('search_word'));
+		
+		$this -> pdo -> order_by($order, $desc);
+		$query = $this -> pdo -> get($this -> table, $per_page, $page);
+		$result['list'] = $query -> result_array();
+		return $result;
+	}	
+	
+	public function get_index_by_tagname($per_page = 0, $page = 0,$tagname, $order = NULL, $desc = NULL, $enable = TRUE) {
+		$this -> pdo -> join('taggings','taggable_id=blogs.id');
+		$this -> pdo -> join('tags','taggings.tag_id=tags.id');
+		$this -> pdo -> where(array('tags.name' => $tagname));
+		$result['total'] = $this -> pdo -> count_all_results('blogs');
+		
+		if (empty($order)) {
+			if (empty($this -> order)) {
+				$order = $this -> order;
+			} else {
+				$order = 'id';
+			}
+		}
+
+		if (empty($desc)) {
+			if (empty($this -> desc)) {
+				$desc = $this -> desc;
+			} else {
+				$desc = TRUE;
+			}
+		}
+
+		if (!is_bool($desc))
+			throw new Exception("Error Processing Request", 1);
+
+		if ($desc) {
+			$desc = 'desc';
+		} else {
+			$desc = 'asc';
+		}
+
+		if (!$result['total'])
+			return $result;
+
+		$this -> pdo -> select('blogs' . '.*');
+		$this -> pdo -> join('taggings','taggable_id=blogs.id');
+		$this -> pdo -> join('tags','taggings.tag_id=tags.id');
+		$this -> pdo -> where(array('tags.name' => $tagname));
+		$this -> pdo -> order_by($order, $desc);
+		$query = $this -> pdo -> get('blogs', $per_page, $page);
+		$result['list'] = $query -> result_array();
+		return $result;
+	}	
 
 	public function get_cloud($className) {
 		$this -> pdo -> from('taggings');
@@ -26,10 +126,10 @@ class Tag extends SL_Model {
 		}
 	}
 
-	public function get_index_by_taggable_id($taggable_id) {
+	public function get_index_by_taggable_id($taggable_id,$model_name) {
 		$this -> pdo -> from('taggings');
 		$this -> pdo -> join('tags', 'taggings.tag_id=tags.id');
-		$this -> pdo -> where(array('taggable_id' => $taggable_id));
+		$this -> pdo -> where(array('taggable_id' => $taggable_id,'taggable_type'=>$model_name));
 		$this -> pdo -> group_by('tags.id');
 		$query = $this -> pdo -> get();
 		return $query -> result_array();
@@ -51,6 +151,7 @@ class Tag extends SL_Model {
 			return false;
 		
 		$className = $this -> router -> fetch_class();
+		
 		foreach ($data['tags'] as $index => $value) {
 			$this -> pdo -> where(array('name' => $value));
 			
@@ -63,11 +164,14 @@ class Tag extends SL_Model {
 				$this -> pdo -> where('id', $id);
 				$this -> pdo -> update('tags', array('taggings_count' => 'taggings_count+1'));
 			} else {
-				if ($this -> pdo -> insert('tags', array('name' => $value, 'taggings_count' => 1))) {
+				if ($this -> pdo -> insert('tags', array('name' => $value, 'taggings_count' => 1)))
 					$id = $this -> pdo -> insert_id();
-				}
-				$this -> pdo -> insert('taggings', array('tag_id' => $id, 'taggable_id' => $data['taggable_id'], 'taggable_type' => $data['taggable_type'], 'context' => 'tags','created_at'=> date('Y-m-d H:i:s')));							
-			}			
+			}
+			
+			$this -> pdo -> where(array('tag_id' => $id,'taggable_type'=>$data['taggable_type']));
+			
+			if(!$this -> pdo -> count_all_results('taggings'))					
+				$this -> pdo -> insert('taggings', array('tag_id' => $id, 'taggable_id' => $data['taggable_id'], 'taggable_type' => $data['taggable_type'], 'context' => 'tags','created_at'=> date('Y-m-d H:i:s')));		
 		}
 		return true;
 	}

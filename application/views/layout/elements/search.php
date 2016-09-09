@@ -1,12 +1,12 @@
 <div class="hidden-xs">
-	<form class="form-inline sl_search_form" role="form" method="get" style="float:right">
+	<form action="<?php echo '/'.$this->router->fetch_class() ?>" class="form-inline sl_search_form" method="get">
     <div class="input-group">
      <div class="input-group-btn">
      		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?php if($this->input->get('search_type')): ?><?php echo $data['search_type_title'] ?><?php else: ?><?php echo _('label_title') ?><?php endif ?> &nbsp; <span class="caret"></span></button>
      		<ul class="dropdown-menu" role="menu">
-     			<li><?php echo anchor('communities?search_type=title',_('label_title')) ?></li>
-     			<li><?php echo anchor('communities?search_type=content',_('label_content')) ?></li>
-     			<li><?php echo anchor('communities?search_type=titlencontent',_('label_titlencontent')) ?></li>
+     			<li><?php echo anchor($this->router->fetch_class().'?search_type=title',_('label_title')) ?></li>
+     			<li><?php echo anchor($this->router->fetch_class().'?search_type=content',_('label_content')) ?></li>
+     			<li><?php echo anchor($this->router->fetch_class().'?search_type=titlencontent',_('label_titlencontent')) ?></li>
      		<!--	<li><?php echo anchor('communities?search_type=nickname',_('label_nickname')) ?></li> -->
      		</ul>
 			</div>
@@ -24,8 +24,8 @@
 	</form>
 </div>
 
-<div class="visible-xs-block col-xs-12" style="margin:20px 0 0">
-	<form class="form-inline sl_search_form" role="form" method="get">
+<div class="visible-xs-block">
+	<form class="form-inline sl_search_form col-xs-12" method="get"  style="margin:20px 0">
 		<div class="row">
 			<div class="search_type col-xs-4"  style="text-align:right">
 			<select name="search_type" class="form-control">

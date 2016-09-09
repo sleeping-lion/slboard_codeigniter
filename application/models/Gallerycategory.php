@@ -5,4 +5,5 @@ require_once 'SLCategory.php';
 
 class Gallerycategory extends SLCategory_Model {
 	protected $table = 'gallery_categories';
+	protected $desc=FALSE;	
 }
